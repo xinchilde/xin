@@ -240,8 +240,14 @@ mark {
     margin-bottom: 0;
 }
 
+#headNav {
+    background-image: linear-gradient(to right, #666 0, #455a64 50%, #666 100%);
+    
+}
+
 .bg-color {
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    /* background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%); */
+    background-image: linear-gradient(to right, #2c2f2b 0, #57798a 100%);
 }
 
 .text-color {
@@ -273,6 +279,7 @@ header .side-nav {
     width: 240px;
     z-index: 999;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 7px 10px 0 rgba(0, 0, 0, 0.12);
+    height: 100%;
 }
 
 nav {
@@ -281,7 +288,7 @@ nav {
 
 header .nav-transparent {
     background-color: transparent !important;
-    background-image: none;
+    background-image: none !important;;
     box-shadow: none;
 }
 
@@ -388,7 +395,8 @@ header .side-nav .social-link {
 
 .cover-btns a:hover {
     border: 1px solid #f44336;
-    background-color: #f44336;
+    /* background-color: #f44336; */
+    background-color: rgba(0,0,0,0.42);
     box-shadow: 0 14px 26px -12px rgba(233, 30, 99, 0.42),
     0 4px 23px 0 rgba(0, 0, 0, 0.12),
     0 8px 10px -5px rgba(233, 30, 99, 0.2);
@@ -540,6 +548,7 @@ header .go-back i {
     background-position: center center;
     background-size: cover;
     transform: translate3d(0px, 0px, 0px);
+	background-color:transparent !important;
 }
 
 .index-cover {
@@ -550,10 +559,11 @@ header .go-back i {
     height: 40vh !important;
 }
 
-.bg-cover:after {
+/* 背景图效果色彩遮盖 */
+/* .bg-cover:after {
     -webkit-animation: rainbow 60s infinite;
     animation: rainbow 60s infinite;
-}
+} */
 
 .bg-cover:before,
 .bg-cover:after {
@@ -1984,20 +1994,26 @@ footer .copy-right {
     /* for set '...' in absolute position */
     position: relative;
     /* use this value to count block height */
-    line-height: 1.5em;
+    /* line-height: 1.5em; */
     /* max-height = line-height (1.2) * lines max number (3) */
-    max-height: 4.5em;
+    /* max-height: 4.5em; */
     /* fix problem when last visible word doesn't adjoin right side  */
     text-align: justify;
     /* place for '...' */
     margin-right: -1em;
     padding-right: 1em;
+
+    min-height: 3em;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 /* create the ... style */
 .block-with-text:before {
     /* points in the end */
-    content: '...';
+    /* content: '...'; */
     /* absolute position */
     position: absolute;
     /* set position to right bottom corner of block */

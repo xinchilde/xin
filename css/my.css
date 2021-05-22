@@ -1,1 +1,33 @@
 /* Here is your custom css styles. */
+
+#daodream-launcher {
+    bottom: 15px !important;
+    right: 74px !important;
+}
+
+
+/* 音乐播放器位置优化 */
+
+.aplayer.aplayer-fixed {
+    border-top-right-radius: 10px!important;
+    border-bottom-right-radius: 10px!important;
+    bottom: 16px!important;
+}
+
+.aplayer.aplayer-fixed .aplayer-body {
+    border-top-right-radius: 10px!important;
+    border-bottom-right-radius: 10px!important;
+    bottom: 16px!important;
+}
+
+.aplayer.aplayer-fixed .aplayer-miniswitcher {
+    border-top-right-radius: 10px!important;
+    border-bottom-right-radius: 10px!important;
+}
+
+
+@media screen and (max-width: 992px) {
+    meting-js {
+        display: none!important;
+    }
+}
