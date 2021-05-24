@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>成长录</title>
+  
+  <subtitle>永远年轻，永远热泪盈眶</subtitle>
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2021-05-22T17:30:08.513Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>XinChilde</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GIT钩子函数之post-receive</title>
+    <link href="http://example.com/2021/05/16/60024.html"/>
+    <id>http://example.com/2021/05/16/60024.html</id>
+    <published>2021-05-16T13:49:42.000Z</published>
+    <updated>2021-05-22T17:30:08.513Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-Server端&quot;&gt;&lt;a href=&quot;#1-Server端&quot; class=&quot;headerlink&quot; title=&quot;1.Server端&quot;&gt;&lt;/a&gt;1.Server端&lt;/h2&gt;&lt;h3 id=&quot;第一步-创建初始化一个裸仓库-用来添加钩子函数&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="技术篇" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+    <category term="Git" scheme="http://example.com/tags/Git/"/>
+    
+    <category term="Hexo" scheme="http://example.com/tags/Hexo/"/>
+    
+    <category term="Linux" scheme="http://example.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux安全问题</title>
+    <link href="http://example.com/2021/05/16/25778.html"/>
+    <id>http://example.com/2021/05/16/25778.html</id>
+    <published>2021-05-16T13:39:52.000Z</published>
+    <updated>2021-05-23T12:00:45.929Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;一、查看安全相关指令&quot;&gt;&lt;a href=&quot;#一、查看安全相关指令&quot; class=&quot;headerlink&quot; title=&quot;一、查看安全相关指令&quot;&gt;&lt;/a&gt;一、查看安全相关指令&lt;/h2&gt;&lt;h3 id=&quot;a-查看现有的用户以及可登录的用户&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="技术篇" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+    <category term="Linux" scheme="http://example.com/tags/Linux/"/>
+    
+    <category term="ssh" scheme="http://example.com/tags/ssh/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux常用命令</title>
+    <link href="http://example.com/2021/05/16/48230.html"/>
+    <id>http://example.com/2021/05/16/48230.html</id>
+    <published>2021-05-16T13:25:11.000Z</published>
+    <updated>2021-05-23T12:03:01.399Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;记录部分命令，&lt;a href=&quot;https://www.runoob.com/linux/linux-command-manual.html&quot;&gt;更多请查看菜鸟教程&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="技术篇" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+    <category term="Linux" scheme="http://example.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo优化篇：Nginx压缩和缓存</title>
+    <link href="http://example.com/2021/05/16/58735.html"/>
+    <id>http://example.com/2021/05/16/58735.html</id>
+    <published>2021-05-16T12:22:33.000Z</published>
+    <updated>2021-05-16T14:19:26.525Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Nginx模板一份，一切尽在其中。&quot;&gt;&lt;a href=&quot;#Nginx模板一份，一切尽在其中。&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="技术篇" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+    <category term="Hexo" scheme="http://example.com/tags/Hexo/"/>
+    
+    <category term="Nginx" scheme="http://example.com/tags/Nginx/"/>
+    
+    <category term="https" scheme="http://example.com/tags/https/"/>
+    
+    <category term="ssl" scheme="http://example.com/tags/ssl/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo之渲染绕过</title>
+    <link href="http://example.com/2020/04/28/17fd92ae.html"/>
+    <id>http://example.com/2020/04/28/17fd92ae.html</id>
+    <published>2020-04-27T16:00:00.000Z</published>
+    <updated>2021-05-22T05:55:03.961Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;0x001-Hexo-渲染&quot;&gt;&lt;a href=&quot;#0x001-Hexo-渲染&quot; class=&quot;headerlink&quot; title=&quot;0x001 Hexo 渲染&quot;&gt;&lt;/a&gt;0x001 Hexo</summary>
+        
+      
+    
+    
+    
+    <category term="博客篇" scheme="http://example.com/categories/%E5%8D%9A%E5%AE%A2%E7%AF%87/"/>
+    
+    
+    <category term="Hexo" scheme="http://example.com/tags/Hexo/"/>
+    
+    <category term="渲染绕过" scheme="http://example.com/tags/%E6%B8%B2%E6%9F%93%E7%BB%95%E8%BF%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PicGo+GitHub 图床搭建</title>
+    <link href="http://example.com/2020/03/15/7a46f93c.html"/>
+    <id>http://example.com/2020/03/15/7a46f93c.html</id>
+    <published>2020-03-14T16:00:00.000Z</published>
+    <updated>2021-05-22T05:55:03.961Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;用GitHub搭建图床，在很久之前我就有了解，但由于市面上有挺多免费的图床，比如我之前一直在用的</summary>
+        
+      
+    
+    
+    
+    <category term="博客篇" scheme="http://example.com/categories/%E5%8D%9A%E5%AE%A2%E7%AF%87/"/>
+    
+    
+    <category term="PicGo" scheme="http://example.com/tags/PicGo/"/>
+    
+    <category term="GitHub图床" scheme="http://example.com/tags/GitHub%E5%9B%BE%E5%BA%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>阿里云服务器部署Hexo博客</title>
+    <link href="http://example.com/2020/02/27/19d2a4e6.html"/>
+    <id>http://example.com/2020/02/27/19d2a4e6.html</id>
+    <published>2020-02-26T16:00:00.000Z</published>
+    <updated>2021-05-12T12:53:12.719Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="博客篇" scheme="http://example.com/categories/%E5%8D%9A%E5%AE%A2%E7%AF%87/"/>
+    
+    
+    <category term="Hexo" scheme="http://example.com/tags/Hexo/"/>
+    
+    <category term="阿里云" scheme="http://example.com/tags/%E9%98%BF%E9%87%8C%E4%BA%91/"/>
+    
+    <category term="博客" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>个人博客搭建</title>
+    <link href="http://example.com/2019/08/27/e3e08109.html"/>
+    <id>http://example.com/2019/08/27/e3e08109.html</id>
+    <published>2019-08-27T03:41:03.000Z</published>
+    <updated>2021-05-17T14:36:04.961Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;0x001-效果演示&quot;&gt;&lt;a href=&quot;#0x001-效果演示&quot; class=&quot;headerlink&quot; title=&quot;0x001 效果演示&quot;&gt;&lt;/a&gt;0x001 效果演示&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="博客篇" scheme="http://example.com/categories/%E5%8D%9A%E5%AE%A2%E7%AF%87/"/>
+    
+    
+    <category term="Hexo" scheme="http://example.com/tags/Hexo/"/>
+    
+    <category term="博客" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="Github" scheme="http://example.com/tags/Github/"/>
+    
+  </entry>
+  
+</feed>

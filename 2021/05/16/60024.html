@@ -31,6 +31,7 @@
 
 <meta name="generator" content="Hexo 5.2.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="成长录" type="application/atom+xml">
 </head>
 
 
@@ -427,12 +428,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Hexo/">
-                                <span class="chip bg-color">Hexo</span>
-                            </a>
-                        
                             <a href="/tags/Git/">
                                 <span class="chip bg-color">Git</span>
+                            </a>
+                        
+                            <a href="/tags/Hexo/">
+                                <span class="chip bg-color">Hexo</span>
                             </a>
                         
                             <a href="/tags/Linux/">
@@ -504,26 +505,26 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-Server端"><a href="#1-Server端" class="headerlink" title="1.Server端"></a>1.Server端</h2><h3 id="第一步-创建初始化一个裸仓库-用来添加钩子函数"><a href="#第一步-创建初始化一个裸仓库-用来添加钩子函数" class="headerlink" title="第一步.创建初始化一个裸仓库(用来添加钩子函数)"></a>第一步.创建初始化一个裸仓库(用来添加钩子函数)</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">git</span> init --bare test_git_hook_function.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h2 id="1-Server端"><a href="#1-Server端" class="headerlink" title="1.Server端"></a>1.Server端</h2><h3 id="第一步-创建初始化一个裸仓库-用来添加钩子函数"><a href="#第一步-创建初始化一个裸仓库-用来添加钩子函数" class="headerlink" title="第一步.创建初始化一个裸仓库(用来添加钩子函数)"></a>第一步.创建初始化一个裸仓库(用来添加钩子函数)</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">git init --bare test_git_hook_function.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h3 id="第二步-通过裸仓库创建一个用来存放代码的仓库"><a href="#第二步-通过裸仓库创建一个用来存放代码的仓库" class="headerlink" title="第二步.通过裸仓库创建一个用来存放代码的仓库"></a>第二步.通过裸仓库创建一个用来存放代码的仓库</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">git</span> init test_git_hook_function
-<span class="token comment">#/home/git/test_git_hook_function.git是上面创建的仓库地址</span>
-<span class="token function">git</span> remote <span class="token function">add</span> origin /home/git/test_git_hook_function.git
-<span class="token function">git</span> clean -df
-<span class="token function">git</span> pull origin master:master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="第二步-通过裸仓库创建一个用来存放代码的仓库"><a href="#第二步-通过裸仓库创建一个用来存放代码的仓库" class="headerlink" title="第二步.通过裸仓库创建一个用来存放代码的仓库"></a>第二步.通过裸仓库创建一个用来存放代码的仓库</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">git init test_git_hook_function
+#/home/git/test_git_hook_function.git是上面创建的仓库地址
+git remote add origin /home/git/test_git_hook_function.git
+git clean -df
+git pull origin master:master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="第三步-创建钩子并赋权限"><a href="#第三步-创建钩子并赋权限" class="headerlink" title="第三步.创建钩子并赋权限"></a>第三步.创建钩子并赋权限</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token builtin class-name">cd</span> /home/git/test_git_hook_function.git/hooks
-<span class="token function">touch</span> post-receive
-<span class="token function">chmod</span> +x post-receive <span class="token comment">#赋予可执行权限</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="第三步-创建钩子并赋权限"><a href="#第三步-创建钩子并赋权限" class="headerlink" title="第三步.创建钩子并赋权限"></a>第三步.创建钩子并赋权限</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">cd /home/git/test_git_hook_function.git/hooks
+touch post-receive
+chmod +x post-receive #赋予可执行权限<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="第四步-编辑钩子内容"><a href="#第四步-编辑钩子内容" class="headerlink" title="第四步.编辑钩子内容"></a>第四步.编辑钩子内容</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token shebang important">#!/bin/sh</span>
-<span class="token assign-left variable">app_dir</span><span class="token operator">=</span>你的代码目录 （例如: <span class="token assign-left variable">app_dir</span><span class="token operator">=</span>/home/git/test_git_hook_function）
-<span class="token builtin class-name">cd</span> <span class="token variable">$app_dir</span> <span class="token operator">||</span> <span class="token builtin class-name">exit</span>
-<span class="token builtin class-name">unset</span> GIT_DIR
-<span class="token comment"># dosomething</span>
-<span class="token punctuation">..</span>.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="第四步-编辑钩子内容"><a href="#第四步-编辑钩子内容" class="headerlink" title="第四步.编辑钩子内容"></a>第四步.编辑钩子内容</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">#!/bin/sh
+app_dir=你的代码目录 （例如: app_dir=/home/git/test_git_hook_function）
+cd $app_dir || exit
+unset GIT_DIR
+# dosomething
+...<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="第五步-测试钩子是否能运行"><a href="#第五步-测试钩子是否能运行" class="headerlink" title="第五步.测试钩子是否能运行"></a>第五步.测试钩子是否能运行</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">sh</span> post-receive <span class="token comment">#或者 ./post-receive</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="第五步-测试钩子是否能运行"><a href="#第五步-测试钩子是否能运行" class="headerlink" title="第五步.测试钩子是否能运行"></a>第五步.测试钩子是否能运行</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sh post-receive #或者 ./post-receive<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
@@ -533,30 +534,30 @@
 <p>gitee上面的仓库代码留作备份，服务器上面的仓库用来作钩子部署</p>
 </blockquote>
 <h3 id="第一步：克隆代码"><a href="#第一步：克隆代码" class="headerlink" title="第一步：克隆代码"></a>第一步：克隆代码</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">方法一：
-<span class="token function">git</span> clone origin git@gitee.com:gitee_user_name/test_git_hook_function.git
+git clone origin git@gitee.com:gitee_user_name/test_git_hook_function.git
 方法二：
-<span class="token function">git</span> init test_git_hook_function <span class="token comment">#关联远程代码仓库</span>
-<span class="token function">git</span> pull origin master:master <span class="token comment">#拉取代码</span>
+git init test_git_hook_function #关联远程代码仓库
+git pull origin master:master #拉取代码
 
-<span class="token function">git</span> remote -v <span class="token comment">#查看现在对应的远程仓库</span>
-    origin  git@gitee.com:gitee_user_name/test_git_hook_function.git <span class="token punctuation">(</span>fetch<span class="token punctuation">)</span>
-    origin  git@gitee.com:gitee_user_name/test_git_hook_function.git <span class="token punctuation">(</span>push<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h3 id="第二步-新增一个推送仓库地址"><a href="#第二步-新增一个推送仓库地址" class="headerlink" title="第二步:新增一个推送仓库地址"></a>第二步:新增一个推送仓库地址</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"> <span class="token function">git</span> remote <span class="token function">add</span> origin your_user_name@your_server_ip<span class="token punctuation">[</span>端口<span class="token punctuation">]</span>/origin_code_library_address
- 例如： <span class="token function">git</span> remote <span class="token function">add</span> origin ssh://git@166.12.35.98/home/git/test_git_hook_function.git
- 针对非22端口 <span class="token function">git</span> remote <span class="token function">add</span> origin ssh://git@166.12.35.98:110/home/git/test_git_hook_function.git
-<span class="token function">git</span> remote -v <span class="token comment">#查看有没有添加上去（此时有三个）</span>
-	origin  git@gitee.com:gitee_user_name/test_git_hook_function.git <span class="token punctuation">(</span>push<span class="token punctuation">)</span>
-    origin  git@gitee.com:gitee_user_name/test_git_hook_function.git <span class="token punctuation">(</span>fetch<span class="token punctuation">)</span>
-    origin  ssh://git@166.12.35.98:110/home/git/test_git_hook_function.git <span class="token punctuation">(</span>push<span class="token punctuation">)</span>
-    origin  ssh://git@166.12.35.98:110/home/git/test_git_hook_function.git <span class="token punctuation">(</span>fetch<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+git remote -v #查看现在对应的远程仓库
+    origin  git@gitee.com:gitee_user_name/test_git_hook_function.git (fetch)
+    origin  git@gitee.com:gitee_user_name/test_git_hook_function.git (push)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
-<h3 id="第三步：推送代码-（前提条件有配置ssh，否则可能会出现推送失败）"><a href="#第三步：推送代码-（前提条件有配置ssh，否则可能会出现推送失败）" class="headerlink" title="第三步：推送代码 （前提条件有配置ssh，否则可能会出现推送失败）"></a>第三步：推送代码 （前提条件有配置ssh，否则可能会出现推送失败）</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token comment">#远程仓库的钩子函数也会被触动（有日志的话，会显示）</span>
-<span class="token function">git</span> push origin master:master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="第二步-新增一个推送仓库地址"><a href="#第二步-新增一个推送仓库地址" class="headerlink" title="第二步:新增一个推送仓库地址"></a>第二步:新增一个推送仓库地址</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"> git remote add origin your_user_name@your_server_ip[端口]/origin_code_library_address
+ 例如： git remote add origin ssh://git@166.12.35.98/home/git/test_git_hook_function.git
+ 针对非22端口 git remote add origin ssh://git@166.12.35.98:110/home/git/test_git_hook_function.git
+git remote -v #查看有没有添加上去（此时有三个）
+	origin  git@gitee.com:gitee_user_name/test_git_hook_function.git (push)
+    origin  git@gitee.com:gitee_user_name/test_git_hook_function.git (fetch)
+    origin  ssh://git@166.12.35.98:110/home/git/test_git_hook_function.git (push)
+    origin  ssh://git@166.12.35.98:110/home/git/test_git_hook_function.git (fetch)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="第三步：推送代码-（前提条件有配置ssh，否则可能会出现推送失败）"><a href="#第三步：推送代码-（前提条件有配置ssh，否则可能会出现推送失败）" class="headerlink" title="第三步：推送代码 （前提条件有配置ssh，否则可能会出现推送失败）"></a>第三步：推送代码 （前提条件有配置ssh，否则可能会出现推送失败）</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">#远程仓库的钩子函数也会被触动（有日志的话，会显示）
+git push origin master:master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 
 
@@ -650,12 +651,12 @@ ServerSide hooks:
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Hexo/">
-                                    <span class="chip bg-color">Hexo</span>
-                                </a>
-                            
                                 <a href="/tags/Git/">
                                     <span class="chip bg-color">Git</span>
+                                </a>
+                            
+                                <a href="/tags/Hexo/">
+                                    <span class="chip bg-color">Hexo</span>
                                 </a>
                             
                                 <a href="/tags/Linux/">
@@ -789,12 +790,12 @@ ServerSide hooks:
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
-                    </a>
-                    
                     <a href="/tags/Git/">
                         <span class="chip bg-color">Git</span>
+                    </a>
+                    
+                    <a href="/tags/Hexo/">
+                        <span class="chip bg-color">Hexo</span>
                     </a>
                     
                     <a href="/tags/Linux/">
@@ -1399,6 +1400,8 @@ $(function () {
 
 
 <!-- 按键屏蔽,不能F12调试和查看源代码 -->
+
+  <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/js/noSomeKey.js"></script>
 
 
 <!-- 星星跟随坠落 -->
