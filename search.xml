@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>发现微博图片可以链接找到发图的人</title>
+      <link href="2021/05/26/62640.html"/>
+      <url>2021/05/26/62640.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p><strong>说明：</strong>不多说了，建议在微博少发黄图和一些隐私图吧，毕竟网络不是法外之地。</p><p>用到的工具：16进制转10进制（百度直接搜索“16转10进制”就行）</p></blockquote><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>例如链接为<code>https://ww3.sinaimg.cn/bmiddle/78e78bf4ly1gqvzy0nsvjj20n04ab1kx.jpg</code>的图。</p><p>提取文件名<code>78e78bf4ly1gqvzy0nsvjj20n04ab1kx</code>，前<code>8</code>位<code>78e78bf4</code>用<code>16</code>进制转换下变为<code>2028440564</code>，就是<code>用户uid</code>。</p><p>如果是<code>http://wx1.sinaimg.cn/mw690/006r2HqOgy1fj7dxg3zuxj30p02a1wry.jpg</code>这种<code>005</code>、<code>006</code>开头的就用<code>62</code>进制转，至于为什么出现这个应该是发现<code>8</code>位<code>16</code>进制存不下了。</p><p><strong>方法来源：</strong><a href="https://www.v2ex.com/t/388152">https://www.v2ex.com/t/388152</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活小知识 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 微博 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>GIT钩子函数之post-receive</title>
       <link href="2021/05/16/60024.html"/>
       <url>2021/05/16/60024.html</url>
